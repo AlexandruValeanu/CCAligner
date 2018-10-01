@@ -184,7 +184,7 @@ void GenerateDict(bool generateQuickDict) // Generate dictionary from tensor flo
     {
         INFO << "Creating the Dictionary, this might take some time depending "
             "on your TensorFlow configuration : tempFiles/dict/complete.dict";
-        int rv = systemGetStatus("g2p-seq2seq --decode tempFiles/vocab/complete.vocab --model g2p-seq2seq-cmudict/ > tempFiles/dict/complete.dict");
+        int rv = systemGetStatus("g2p-seq2seq --decode tempFiles/vocab/complete.vocab --model_dir g2p-seq2seq-cmudict/ > tempFiles/dict/complete.dict");
 
         if (rv != 0)
         {
